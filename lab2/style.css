@@ -168,10 +168,6 @@
     justify-content: center;
     margin: .7rem auto; 
   }
-  /* .......................End Header Section......................... */
-  
-  
-  /* .......................Start About Section......................... */
   .about-container{
     display: grid;
     grid-template-columns: 38% auto;
@@ -197,10 +193,7 @@
   .edu-box img{
     margin: auto;
   }
-  /* .......................End About Section......................... */
-  
-  
-  /* .......................Start Experience Section......................... */
+
   section{
     position: relative;
   }
@@ -237,47 +230,62 @@
     display: flex;
     gap: 20px;
   }
-  /* .......................End Experience Section......................... */
-  
-  
-  /* .......................Start Projects Section......................... */
-  .project-container{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 30px;
+
+  .table-container {
+    margin-top: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  .project{
-    padding: 24px;
-    border: 1px solid var(--color-dark-variant);  
-    border-radius: 30px;
-    text-align: center;
+
+  table {
+    max-width: 1000px;
+    width: 100%;
+    border-collapse: collapse;
+    border-radius: 20px;
+    overflow: hidden;
   }
-  .project img{
-    border-radius: 30px;
-    margin-bottom: 1rem;
+
+  th {
+    background-color: var(--color-dark-variant);
+    color: white;
+    padding: 10px;
+    text-align: left;
   }
-  /* .......................End Projects Section......................... */
-  
-  
-  /* .......................Start Contact Section......................... */
+
+
+  tr {
+    border-bottom: 1px solid var(--color-dark-variant);
+  }
+
+
+  td {
+    padding: 10px;
+  }
+
+  tr:hover {
+    background-color: #f5f5f5;
+  }
+
+  tr a{
+    font-size: 16px;
+  }
+
   .contact-container{
-    max-width: 30rem;
-    border: 1px solid var(--color-dark-variant);
-    padding: 24px;  
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  .email,.linkedin{
-    display: flex;
-    align-items: center;
-    gap: .5rem;
-  }
-  /* .......................End Contact Section......................... */
-  
-  
-  /* .......................Start Footer Section......................... */
+      max-width: 30rem;
+      border: 1px solid var(--color-dark-variant);
+      padding: 24px;
+      border-radius: 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .email,.linkedin{
+      display: flex;
+      align-items: center;
+      gap: .5rem;
+    }
+
   footer{
     margin-top: 9rem;
     padding: 30px;
@@ -287,121 +295,4 @@
     justify-content: center;
     margin-bottom: 3rem;
   }
-  /* .......................End Footer Section......................... */
-  
-  
-  /* .......................Start Media Scrin ......................... */
-  /* Max-Width(1024px) */
-  @media (max-width:1024px) {
-      /*Start About  */
-      .about-container{
-        gap: 30px;
-      }
-      .basic-edu{
-        gap: 20px;
-      }
-      /*Start Experience  */
-      .experience-container{
-        gap: 30px;
-      }
-      /*Start Projects  */
-      .project-container{
-        grid-template-columns: repeat(2,1fr);
-      }
-  }
-  /* Max-Width(991px) */
-  @media (max-width:991px) {
-      /*Start Nav  */
-      .logo{
-        display: none;
-      }
-      .nav-links{
-        justify-content: center;    
-        width: 100%;
-      }
-      /*Start Experience  */
-      .experience-container{
-        grid-template-columns: 1fr;
-      }   
-  }
-  /* Max-Width(768px) */
-  @media (max-width:768px) {
-    h1{
-      font-size: 38px;    
-    }
-    h2{
-      font-size: 26px;
-    }
-    a{
-      font-size: 20px;
-    }
-    h3{
-      font-size: 24px;
-    }
-    .arrow{
-      right: 5%;
-    }
-      /*Start Header  */
-      .header-container{
-        width: 90%;
-        grid-template-columns: 1fr;
-      }
-      .header-left{
-        width: 70%;
-        margin: 0 auto;
-      }
-      /*Start About  */
-      .about-container{
-        grid-template-columns: 1fr;
-      }    
-      .about-left{
-        width: 70%;
-        margin: 0 auto;
-      }
-      .basic-edu{
-        gap: 10px;
-      }
-      /*Start Experinec  */ 
-      .experience-box{
-        padding: 10px;
-      }
-      .experience{
-        gap: 20px;
-      }
-      .ex-div{
-        gap: 10px;
-      }
-      /*Start projects  */ 
-      .project-container{
-        grid-template-columns: 1fr;
-      }    
-  }
-  /* Max-Width(600px) */
-  @media (max-width:600px) {
-    a{
-      font-size: 18px;    
-    }
-    /* .......Start Nav........*/
-    .nav-links{
-      gap: 0;
-      justify-content: space-between;    
-    }
-    /* .......Start Contact........*/
-    .contact-container {
-      flex-direction: column;  
-      gap: 1rem;  
-    }
-    /* .......Start footer........*/
-    footer{
-      padding: 0;
-      padding-bottom: 20px;
-      width: 90%;
-      margin: auto;
-      margin-top: 9rem;
-    }
-    footer .nav-links{
-      width: 100%;  
-      justify-content: space-between;  
-    }
-  }
-  /* .......................End Media Scrin......................... */
+
