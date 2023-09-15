@@ -127,8 +127,8 @@
   }
   .logo{
     font-size: 32px ;
-    color: var(--color-black) !important;
-    text-decoration: none !important;
+    color: var(--color-black);
+    text-decoration: none;
   }
   .nav-links{
     display: flex;
@@ -232,7 +232,7 @@
   }
 
   .table-container {
-    margin-top: 8rem;
+
     display: flex;
     justify-content: center;
     align-items: center;
