@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
             <h2>${episode.name}</h2>
             <p>Episode: ${episode.episode}</p>
             <p>Air Date: ${episode.air_date}</p>
-            <video controls width="320">
+            <video controls width="700">
                 <source src="${episode.url}" type="video/mp4">
                 Your browser does not support the video tag.
             </video>
