@@ -1,55 +1,57 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
- <head>
-  <title>Buy Your Way to a Better Education!</title>
-  <link href="http://www.cs.washington.edu/education/courses/cse190m/09sp/labs/4-buyagrade/buyagrade.css" type="text/css" rel="stylesheet" />
- </head>
- 
- <body>
-  <h1>Buy Your Way to a Better Education!</h1>
+<head>
+ <title>Buy Your Way to a Better Education!</title>
+ <link href="http://www.cs.washington.edu/education/courses/cse190m/09sp/labs/4-buyagrade/buyagrade.css" type="text/css" rel="stylesheet" />
+</head>
 
-  <p>
-   The rough economy, along with recent changes in University of Washington policy, now allow us to offer grades for money.  That's right!  All you need to get a 4.0 in this course is cold, hard, cash.
-  </p>
-  
-  <hr />
-  
-  <h2>Give Us Your Money</h2>
-  
-  <form method="POST" action="sucker.php">
-   <dl>
-    <dt>Name</dt>
-    <dd>
-     <input type="text" id="name" name="name" required>
-    </dd>
-    
-    <dt>Section</dt>
-    <dd>
-     <select id="section" name="section" required>
-      <option value="MA">MA</option>
-      <option value="MB">MB</option>
-      <option value="MC">MC</option>
-      <option value="MD">MD</option>
-      <option value="ME">ME</option>
-      <option value="MF">MF</option>
-      <option value="MG">MG</option>
-      <option value="MH">MH</option>
-     </select>
-    </dd>
-    
-    <dt>Credit Card</dt>
-    <dd>
-     <input type="text" id="creditcard" name="creditcard" required>
-    </dd>
-   </dl>
+<body>
+ <h1>Buy Your Way to a Better Education!</h1>
 
-   <div>
-    <input type="checkbox" id="sucker" name="sucker" value="yes" required>
-    <label for="sucker">I am a giant sucker.</label>
-   </div>
+ <p>
+  The rough economy, along with recent changes in University of Washington policy, now allow us to offer grades for money.  That's right!  All you need to get a 4.0 in this course is cold, hard, cash.
+ </p>
 
-   <input type="submit" value="Submit">
-  </form>
-  
- </body>
+ <hr />
+
+ <h2>Give Us Your Money</h2>
+
+ <form method="POST" action="sucker.php">
+  <dl>
+   <dt>Name</dt>
+   <dd>
+    <input type="text" id="name" name="name" required>
+   </dd>
+
+   <dt>Section</dt>
+   <dd>
+    <select id="section" name="section" required>
+     <option value="MA">MA</option>
+     <option value="MB">MB</option>
+     <option value="MC">MC</option>
+     <option value="MD">MD</option>
+     <option value="ME">ME</option>
+     <option value="MF">MF</option>
+     <option value="MG">MG</option>
+     <option value="MH">MH</option>
+    </select>
+   </dd>
+
+   <dt>Credit Card</dt>
+   <dd>
+    <input id="cardNumber" type="text" name="cardNumber" /><br>
+    <input id="card" type="radio" name="card" value="MasterCard">MasterCard</input>
+    <input id="card" type="radio" name="card" value="Visa">Visa</input><br>
+   </dd>
+  </dl>
+
+  <div>
+   <input type="checkbox" id="sucker" name="sucker" value="yes" required>
+   <label for="sucker">I am a giant sucker.</label>
+  </div>
+
+  <input type="submit" value="Submit">
+ </form>
+
+</body>
 </html>
