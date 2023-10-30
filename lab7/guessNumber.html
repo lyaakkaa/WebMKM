@@ -12,6 +12,59 @@
     Guess the number (between 1 and 10):
     <input type="number" name="user_guess" min="1" max="10" required>
     <input type="submit" value="Submit Guess">
+    <button id="resetTimer">Reset Timer</button>
+    <div id="timer"></div>
+
 </form>
+<script>
+    function startTimer() {
+        var display = document.getElementById("timer");
+        var resetButton = document.getElementById("resetTimer");
+
+        var cnt = localStorage.getItem("timerCountdown");
+        if (cnt === null) {
+            cnt = 10;
+        } else {
+            cnt = parseInt(cnt, 10);
+        }
+
+        function updateDisplay() {
+            display.textContent = cnt;
+        }
+
+        updateDisplay();
+
+        var countdown = setInterval(function () {
+            if (cnt <= 0) {
+                clearInterval(countdown);
+                alert("Время истекло! Click 'Reset Timer' to start over.");
+                resetButton.disabled = false;
+            } else {
+                cnt--;
+                updateDisplay();
+                localStorage.setItem("timerCountdown", cnt);
+            }
+        }, 1000);
+
+        return countdown;
+    }
+
+    window.onload = function () {
+        var resetButton = document.getElementById("resetTimer");
+        var timer = startTimer();
+
+        resetButton.addEventListener("click", function () {
+            resetButton.disabled = true;
+            clearInterval(timer);
+            var display = document.getElementById("timer");
+            display.textContent = 10;
+
+
+            localStorage.setItem("timerCountdown", 10);
+
+            timer = startTimer();
+        });
+    };
+</script>
 </body>
 </html>
