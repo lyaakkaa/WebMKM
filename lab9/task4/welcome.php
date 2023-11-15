@@ -7,7 +7,6 @@ if (isset($_POST['logout'])) {
 
 }
 
-// Проверяем, аутентифицирован ли пользователь
 $isAuthenticated = isset($_SESSION["username"]);
 ?>
 
@@ -25,7 +24,6 @@ $isAuthenticated = isset($_SESSION["username"]);
     if ($isAuthenticated) {
         echo "You logged in ";
 
-        // Calculate and display time elapsed since login
         $loginTime = $_SESSION["login_time"];
         $timeElapsed = time() - $loginTime;
 
