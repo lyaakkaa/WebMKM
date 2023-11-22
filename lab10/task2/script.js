@@ -29,7 +29,7 @@ function startQuiz() {
     score = 0;
     restartBtn.style.display = "none";
     resultContainer.textContent = "";
-    optionsContainer.style.display = "block"; // Отображаем контейнер с вариантами ответов
+    optionsContainer.style.display = "block"; 
     showQuestion();
 }
 
@@ -58,7 +58,6 @@ function checkAnswer(answer) {
         score++;
     } else {
         optionsContainer.firstChild.style.backgroundColor = "#f44336"; // красный
-        // Подсветим правильный ответ
         quizData[currentQuestion].options.forEach((option) => {
             if (option === correctAnswer) {
                 optionsContainer.innerHTML += `<button disabled style="background-color: #4caf50;">${option}</button>`;
