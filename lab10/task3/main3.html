@@ -1,24 +1,27 @@
 <!-- Make authorization form with validation. You can also implement the output of warnings that the information is entered incorrectly.  -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Authorization Form</title>
-  <link rel="stylesheet" href="style3.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Authorization Form</title>
+    <link rel="stylesheet" href="style3.css">
 </head>
+
 <body>
     <form id="authorizationForm">
         <label for="username">Username:</label>
         <input type="text" id="username" name="username" required>
-    
+
         <label for="password">Password:</label>
         <input type="password" id="password" name="password" required>
-    
+
         <div class="error-message" id="error-message"></div>
-    
+
         <button type="button" onclick="validateForm()">Login</button>
     </form>
-  <script src="script3.js"></script>
+    <script src="script3.js"></script>
 </body>
+
 </html>
