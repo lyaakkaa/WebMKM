@@ -1,19 +1,85 @@
-<!-- Make Website Load Indicator which updates every few milliseconds.  -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loading Indicator</title>
+  <style>
+    #loading-container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    #loading-spinner {
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #loading-fill {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #3498db;
+      transform-origin: bottom;
+      transform: scaleY(0);
+      transition: transform 0.5s ease-out; /* Adjusted transition duration */
+    }
+
+    #loading-text {
+      margin-left: 10px;
+      font-size: 18px;
+      display: none;
+    }
+  </style>
 </head>
-
 <body>
-    <div id="loading-container">
-        <div id="loading-spinner"></div>
-        <p>Loading...</p>
-    </div>
-    <script src="main.js"></script>
-</body>
 
+<div id="loading-container">
+  <div id="loading-spinner">
+    <div id="loading-fill"></div>
+  </div>
+  <div id="loading-text">Загружено</div>
+</div>
+
+<script>
+
+  const fillDuration = 3000; 
+
+  const updateInterval = 50;
+
+
+  const numSteps = fillDuration / updateInterval;
+
+  const scaleIncrement = 1 / numSteps;
+
+  let currentScale = 0;
+  let currentStep = 0;
+
+  function updateSpinner() {
+    currentScale += scaleIncrement;
+    document.getElementById('loading-fill').style.transform = `scaleY(${currentScale})`;
+
+    currentStep++;
+
+    if (currentStep >= numSteps) {
+
+      document.getElementById('loading-spinner').style.display = 'none';
+      document.getElementById('loading-text').style.display = 'block';
+    } else {
+      setTimeout(updateSpinner, updateInterval);
+    }
+  }
+
+  setTimeout(updateSpinner, updateInterval);
+</script>
+
+</body>
 </html>
