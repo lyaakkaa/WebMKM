@@ -1,0 +1,73 @@
+body {
+    background-color: #04052e;
+}
+
+.wrapper {
+    max-width: 1140px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
+
+.score {
+    color: #FF5733 ;
+    font-size: 25px;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: 300;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.play-btn {
+    padding: 5px;
+    border: 2px solid #8338ec;
+    border-radius: 4px;
+    color: #ffbe0b;
+    background-color: #04052e;
+    font-size: 15px;
+    margin: 0;
+}
+
+.play-btn:active {
+    color: #ff3375;
+    border: 2px solid #3375ff;
+    transform: translateY(1px);
+}
+
+.game-container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid {
+    width: 200px;
+    height: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid white;
+}
+
+.grid div,
+.mini-grid div {
+    height: 20px;
+    width: 20px;
+}
+
+.tetromino {
+    background-color: white;
+}
+
+.mini-grid {
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 2px solid white;
+    margin-left: 40px;
+}
